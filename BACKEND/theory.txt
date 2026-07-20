@@ -1,0 +1,52 @@
+basic set up done 
+
+mongodb setup -> cluster definition done -> it gives us a username and password we can connect as admin to it in mongodb compass , if 
+pop -up missed we can create it from database and network access layer 
+
+eZP7IbAHvs4KsTK8-> this is key of that cluster 
+
+IP access list -> cluster k andrr database , those ip address we can connect to our database , on mobile hotspot it changes rapidly 
+
+mongodb+srv://naitik:eZP7IbAHvs4KsTK8@interview-ai-cluster.mifngia.mongodb.net/interview-master
+
+this is link to give to mongodb compass and to connect with database 
+
+we will connect to database in src>config folder and then database.js 
+
+--------------------------------------------------------------------
+till now all basic things done now we will create login / register / logout / how it looks like (API's basically )
+
+
+1. src > models > user schema and export that is it 
+2. going to create auth routes in  auth.routes.js in routes folder by requiring authrouter basically router , we have another syntax also , then export 
+3. require in app.js to create API's , app.use("/api/auth) this is a prefix to use auth related API's to access them 
+
+------------------------------------------------------------------------------------------------
+register and login api done logic and idea written through comments in the controllers function itself 
+
+------------------------------------------------------------------------------------------------
+log out logic -> 
+suppose  there is X user and the jwt generates token for the user X with its details , now user use this token whenever the user logins to the website , this is the big picture of the thing happening here......
+---------------------------------------------------------------------------------------------------
+Q- what beginners  do ?  
+Ans ->  they simply create an API and remove the user's token from user's side , this is not a good way rather we do it through token blacklisting , 
+Loop hole in this method -> 
+ for ex - user "Y" do something and by an  accident  he gots the token of user "X" and copied it , kind of hacked "X" user and compromised  , and hence the user "X" log out from all accounts to protect his / her account but we have written the logic in this way that only logged out from the current logged in account , That is why this method is compromised ,  here comes a concept of token blacklisting 
+ ---------------------------------------------------------------------------------------------------
+
+ in this  method server maintains a list , literally a blacklist , when the user requests for token delete from cookie , or we can say that log out from current account , that specific token will go into blacklist and whenever the the user "Y" makes request on the basis of user "X"  it detects the same and is deleted once again from that specific "Y" account also , and finally returns 401 unauthorized 
+
+ there are diff diff tools for doing token blacklisting we can do it by redis but here we are doing it through mongodb functionality  
+ ----------------------------------------------------------------------------------------------
+token blacklisting 
+we generally use redis at production level but here  we are using mongodb functionality 
+------------------------------------------------------------
+in mongodb compass we are only giving name till mongodb cluster 
+------------------------------------------------------------------
+till now we have created login logout register API's  and tested them 
+--------------------------------------------------------------------
+now we have to create a middleware that identifies the user and to check for the token is it already blacklisted or not + one more API 
+
+GET ME API -> details of the user 
+----------------------------------------------------------------
+till now understand done and clear and once understand with AI 

@@ -1,0 +1,31 @@
+creating boilerplate of react app
+ . -> react's  template directly in frontend folder 
+
+ we have react template or we can say that basic webpage we have to make changes in it 
+
+ here we are using scss instead of css , super set of css 
+
+
+ main.jsx is the Entry Point. Its only job is to connect your React code to the actual browser web page (the HTML).
+
+App.jsx is the Root Component. It is the main container where your actual website design, layout, and logic begin.
+
+while importing scss we will  get a error -> it will insist us to  download a package that is sass 
+--------------------------------------------------------------------------------------------
+now we have to set react router DOM -> navigation and all 
+we have a package for it npm i react-router
+
+1. now we have to set that which page will be shown on which route like for ex register route on which page , similarly login logout routes shown on which page 
+for this kinda work we have to create a separate file which is app.routes.jsx
+
+----------------------------------------------------------------------------------------
+we are using features page for features here we use authentication and Ai related resume and all things 
+
+in auth we have multiple folders like pages ...
+in Components we use multiple things that are used multiple times 
+import into app.routes.jsx the login and register pages 
+
+---------------------------------------------------------- 
+we have now features and it in we have login and register 
+and in app.routes.jsx we have imported the login and register
+and finally we are requiring the main App.jsx 
