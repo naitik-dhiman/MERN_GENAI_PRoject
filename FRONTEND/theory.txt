@@ -29,3 +29,7 @@ import into app.routes.jsx the login and register pages
 we have now features and it in we have login and register 
 and in app.routes.jsx we have imported the login and register
 and finally we are requiring the main App.jsx 
+
+-----------------------------------------------------------
+till now done 
+we have to go to login.jsx to implement fully UI of login.jsx 
