@@ -1,0 +1,28 @@
+.button {
+    border: none;
+    outline: none;
+    padding-inline: 1.5rem;
+    padding-block: 0.85rem;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-size: 1rem;
+    font-weight: 600;
+
+    &.primary-button {
+        background-color: #b10606;
+        color: white;
+    }
+
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    &:active {
+        transform: scale(0.95);
+    }
+}
+
+
+// generalizing the button styling here and will require according to the need 

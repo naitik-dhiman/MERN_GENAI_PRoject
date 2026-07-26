@@ -33,3 +33,27 @@ and finally we are requiring the main App.jsx
 -----------------------------------------------------------
 till now done 
 we have to go to login.jsx to implement fully UI of login.jsx 
+-----------------------------------------------------
+full flow -:
+1. Browser loads index.html
+   ↓
+2. index.html runs main.jsx script
+   ↓
+3. main.jsx:
+   - Imports React & App component
+   - Imports global styles (style.scss)
+   - Renders <App /> inside #root div
+   ↓
+4. App.jsx:
+   - Imports RouterProvider from react-router
+   - Imports router configuration from app.routes.jsx
+   - Returns <RouterProvider router={router} />
+   ↓
+5. RouterProvider:
+   - Reads URL path from browser
+   - Matches path against routes in app.routes.jsx
+   - Renders corresponding component
+   ↓
+6. Router Mapping:
+   - /login    → <Login /> component
+   - /register → <Register /> component
