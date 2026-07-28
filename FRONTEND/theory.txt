@@ -57,3 +57,5 @@ full flow -:
 6. Router Mapping:
    - /login    → <Login /> component
    - /register → <Register /> component
+--------------------------------------------------------------------------------------------
+now we are creating a nav by which user can switch betwen register and llogin route of UI , till here styling is done and UI layer is done , so now we have to work on how frontend connects with backend and how API call is given to backend to communicate throguh frontend 
