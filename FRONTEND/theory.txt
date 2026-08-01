@@ -59,3 +59,30 @@ full flow -:
    - /register → <Register /> component
 --------------------------------------------------------------------------------------------
 now we are creating a nav by which user can switch betwen register and llogin route of UI , till here styling is done and UI layer is done , so now we have to work on how frontend connects with backend and how API call is given to backend to communicate throguh frontend 
+
+01 aug ->
+no we have complete UI of register nad login , now we have to create the 2nd layr that is API one which communicates with backend 
+UI DONE we have 4 layer architecture 
+architecture and thier folders ...
+UI -> component , pages (dikhana and navigation between pages )
+
+ HOOK-> Hooks and there are many files  (for managing state and API layer )
+
+ STATE ->  auth.context.jsx  auth , ai.context.jsx (to show data of user that has to be shown on frontend manages the state of data )
+ data storage used for state layer ,
+
+
+API Layer -> services -> auth.api.js (helps to communicate between frontend and backend )   connects with auth.routes.js how it is interacting with API's that we have craeted in backend 
+
+----------------------------------------------------------------------------------------------------------------
+now implementing AI layer 
+ . to connect frontend with backend we need a package that is axios 
+ axios by defaullt does not give access to cookies so we have to set by ourselves in auth.api.js to set token in cookie 
+
+
+ we use try and catch also here because while calling API there may be an error 
+
+ similarly created the login , logout , get-Me api at frontend to commmunicate with backeend 
+
+
+ we are  creating an instance on above of api/auth/js to avoid the repetitive code 
