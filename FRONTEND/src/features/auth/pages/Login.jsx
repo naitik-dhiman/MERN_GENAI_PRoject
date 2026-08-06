@@ -1,12 +1,12 @@
-import React , {useState} from "react"
-import "../auth.form.scss"
-import {useNavigate , Link } from "react-router"
-import {useAuth} from "../hooks/useAuth" 
+import React, { useState } from "react";
+import "../auth.form.scss";
+import { useNavigate, Link } from "react-router";
+import { useAuth } from "../hooks/useAuth";
 
 const Login = () => {
   const { loading, handleLogin } = useAuth();
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -14,13 +14,17 @@ const Login = () => {
   };
 
   if (loading) {
-    return <main><h1>Loading.......</h1></main>;
+    return (
+      <main>
+        <h1>Loading...</h1>
+      </main>
+    );
   }
 
   return (
     <main>
       <div className="form-container">
-        <h1>Login</h1>
+        <h1>Welcome Back</h1>
         <form onSubmit={handleSubmit}>
           <div className="input-group">
             <label htmlFor="email">Email</label>
@@ -29,7 +33,8 @@ const Login = () => {
               id="email"
               type="email"
               name="email"
-              placeholder="Enter email address"
+              placeholder="Enter your email"
+              required
             />
           </div>
 
@@ -40,22 +45,22 @@ const Login = () => {
               id="password"
               type="password"
               name="password"
-              placeholder="Enter password"
+              placeholder="Enter your password"
+              required
             />
           </div>
 
           <button type="submit" className="button primary-button">
-            Login
+            Sign In
           </button>
         </form>
 
-        <p>Don't have an account? <Link to="/register">Register</Link></p>
+        <p>
+          Don't have an account? <Link to="/register">Register</Link>
+        </p>
       </div>
     </main>
   );
-}
+};
 
-export default Login
-
-
-
+export default Login;
