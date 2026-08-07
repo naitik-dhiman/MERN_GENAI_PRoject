@@ -86,3 +86,8 @@ now implementing AI layer
 
 
  we are  creating an instance on above of api/auth/js to avoid the repetitive code 
+
+
+
+
+ after completion of login the client has to re direct into dummy page or home page for doing that we will need a home page route 

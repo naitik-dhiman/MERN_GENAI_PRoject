@@ -50,3 +50,7 @@ now we have to create a middleware that identifies the user and to check for the
 GET ME API -> details of the user 
 ----------------------------------------------------------------
 till now understand done and clear and once understand with AI 
+----------------------------------------------------------------
+till now the basic frontend + backend part is done and now the  cors error is here now we have to fix this cors error because it will pop up on login screen 
+we have to add it in app.js in our backend folder 
+----------------------------------------------------------------------------------------
