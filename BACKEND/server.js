@@ -1,4 +1,4 @@
-require("dotenv").config()
+require("dotenv").config() // too use dot env or env variables  
 const app = require("./src/app");
 const connectToDB = require("./src/config/database");
 
